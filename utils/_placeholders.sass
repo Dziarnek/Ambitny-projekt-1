@@ -1,0 +1,48 @@
+%font-h
+	font-weight: normal
+
+%hero
+	height: 100vh
+	width: 100%
+	background-size: cover
+	display: flex
+
+%slogan
+	align-self: center
+	margin-left: 100px
+	width: 400px
+	color: white
+
+%alert
+	button
+		background-color: #e1e1e1
+		padding: 5px 10px
+		border-radius: 5px
+		text-transform: uppercase
+		color: white
+		border: none
+
+%alert-hover
+	button
+		background-color: #bd8cbf
+
+%green-btn
+	background-color: #82ca9c
+	border-radius: 5px
+	padding: 10px
+	color: white
+	text-transform: uppercase
+	border: none
+	&:hover
+		background-color: green
+		cursor: pointer
+	
+%see
+	color: white
+	text-decoration: none
+	padding: 5px
+	border-radius: 5px
+	&:hover
+		@include transform (1.10)
+		background-color: rgba(255, 255, 255, 0.2)
+		color: black

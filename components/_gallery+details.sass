@@ -1,0 +1,38 @@
+.gallery
+	color: white
+	.row
+		[class*="col-m-"]
+			height: 350px
+			background-size: cover
+			display: flex
+			flex-wrap: wrap
+			a
+				@extend %see
+				align-self: flex-end
+		&:first-of-type
+			.col-m-3
+				&:first-of-type
+					background-color: #f5989d
+				&:nth-of-type(2)
+					background-color: #615f7d
+				&:nth-of-type(3)
+					background-image: url("http://farm5.staticflickr.com/4473/37565433216_b6eebb2957_b.jpg")
+				&:nth-of-type(4)
+					background-color: #bd8cbf
+		&:last-of-type
+			[class*="col-m-"]
+				&:first-of-type
+					background-image: url("http://farm5.staticflickr.com/4494/37565388766_59a1426769_b.jpg")
+					background-size: cover
+					background-position: center
+				&:nth-of-type(2)
+					background-color:  #82ca9c
+				&:last-of-type
+					background-image: url("http://farm5.staticflickr.com/4506/37355449590_bbd290aa94_b.jpg")
+
+.details
+	margin: 20px 16.66%
+	text-align: justify
+	p
+		color: grey	
+				

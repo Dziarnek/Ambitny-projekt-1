@@ -1,0 +1,21 @@
+.hero-2
+	@extend %hero
+	background-image: url("http://farm5.staticflickr.com/4447/23761233348_e6049c1b5c_b.jpg")
+	.slogan-2
+		@extend %slogan
+		h2 
+			font-size: 50px
+			font-weight: normal
+		a
+			@extend %see
+
+.reasons
+	background-color: #82ca9c
+	padding: 20px
+	color: white
+					
+@media (max-width: 767px)
+	.hero-2
+		.slogan-2
+			@extend %slogan-media
+			margin-left: 20px

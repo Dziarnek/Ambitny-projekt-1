@@ -1,0 +1,52 @@
+.hero
+	@extend %hero
+	background-image: url("http://farm5.staticflickr.com/4495/36903416164_2dcb7d4e7d_b.jpg")
+	.take
+		margin: 50px 0 0 100px 
+		.circle
+			border: 3px solid #fff
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			display: inline-block
+			&:before
+				content: ""
+				border: 3px solid #fff
+				border-radius: 50%
+				width: 20px
+				height: 20px
+				position: absolute
+				margin-top: 10px
+				margin-left: 10px
+			&:after
+				content: "take"
+				color: white
+				margin-left: 60px
+				font-size: 30px
+	.slogan
+		@extend %slogan
+	img
+		align-self: bottom
+		margin-top: 200px
+		height: 100%
+
+.new
+	.col-m-4
+		&:last-of-type
+			margin-top: 170px
+
+@media (max-width: 767px)
+	.hero
+		.slogan
+			@extend %slogan-media
+			z-index: 1
+		img
+			margin-top: 70px
+			position: absolute
+			right: -30px
+			z-index: 0
+			opacity: 0.5
+	.new
+		.col-m-4
+			&:last-of-type
+				margin-top: 5px

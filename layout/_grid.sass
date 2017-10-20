@@ -1,0 +1,30 @@
+[class*="col-"]
+	float: left
+	min-height: 1px
+	padding: 15px
+	img
+		width: 100%
+
+.row
+	margin: 0
+	&:before,
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+@media (max-width: 767px)
+	@for $i from 1 through 12
+		.col-s-#{$i}
+			width: (100% / 12 * $i)	
+	@for $i from 0 through 12
+		.col-s-offset-#{$i}
+			margin-left: (100% / 12 * $i)
+
+@media (min-width: 768px)
+	@for $i from 1 through 12
+		.col-m-#{$i}
+			width: (100% / 12 * $i)	
+	@for $i from 0 through 12
+		.col-m-offset-#{$i}
+			margin-left: (100% / 12 * $i)
