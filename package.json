@@ -1,0 +1,79 @@
+{
+  "name": "ambitny-projekt-1",
+  "version": "1.0.0",
+  "description": "Ambitny projekt 1",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-sass": "^2.0.0"
+  },
+  "devDependencies": {
+    "grunt-sass": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dziarnek/Ambitny-projekt-1.git"
+  },
+  "keywords": [
+    "Ambitny",
+    "Projekt",
+    "1"
+  ],
+  "author": "Jakub Dziarnowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dziarnek/Ambitny-projekt-1/issues"
+  },
+  "homepage": "https://github.com/Dziarnek/Ambitny-projekt-1#readme"
+}
+
+module.exports = function(grunt) {
+  
+    // Project configuration.
+    
+    grunt.initConfig({
+      sass: {
+        options: {
+          sourceMap: true
+        },
+        dist: {
+          files: {
+            'style.css': 'main.sass'
+          }
+        }
+      },
+  
+      imagemin: {
+        dynamic: {
+          files: [{
+            expand: true,
+            cwd: 'images/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'images/build/'
+          }]
+        }
+      }
+
+      watch: {
+       scripts: {
+        files: ['sass/*.sass'],
+        tasks: ['sass'],
+        options: {
+            spawn: false,
+        },
+    }
+}
+  
+  
+    });
+    // Load the plugins tasks
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+  
+    // Default task(s).
+  
+    grunt.registerTask('default', ['sass', 'imagemin', 'watch']);
+  };
