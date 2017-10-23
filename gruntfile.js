@@ -32,9 +32,8 @@ module.exports = function(grunt) {
                 spawn: false,
             },
         }
-    }
-  
-  
+      }
+
     });
     // Load the plugins tasks
     grunt.loadNpmTasks('grunt-sass');
