@@ -1,3 +1,5 @@
-.sass-cache/
 node_modules/
 desktop.ini
+style.css
+style.css.map
+.sass-cache/
